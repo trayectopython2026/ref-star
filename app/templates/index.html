@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<section class="presentacion">
+    <p class="etiqueta">Una galaxia de historias</p>
+    <h1>Conocé a sus personajes</h1>
+    <p>Explora el archivo, busca por nombre y descubri cada categoria</p>
+    <form action="" method="GET" class="buscador">
+        <label for="q">Nombre del personaje</label>
+        <input type="search" name="q" id="q" placeholder="Ejemplo: Luke">
+        <button type="submit">Buscar</button>
+    </form>
+</section>
+<h2>Explorar por categoria</h2>
+<nav class="categorias">
+    {% for nombre in categorias  %}
+        <a href="">{{nombre}}</a>
+    {% endfor %}
+</nav>
+
+{% endblock %}

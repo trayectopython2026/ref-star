@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #eee;
+    font-family: Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a {
+    color: #245a81;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/* Cabecera  */
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #233238;
+}
+
+.marca {
+    color: #ffcc00;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cabecera nav {
+    display: flex;
+    gap: 20px;
+}
+
+.cabecera nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    padding: 20px;
+    background-color: #245a81;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.presentacion {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.etiqueta {
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #ddd;
+    border-radius: 6px;
+}
+
+input,select,button {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+input {
+    /* Puede crecer para ocupar el espacio libre */
+    flex-grow: 1;
+    /* Permite que se achique si falta espacio */
+    min-width: 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #245a81;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.categorias a {
+    padding: 10px 15px;
+    background-color: #263238;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
