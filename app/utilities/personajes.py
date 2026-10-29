@@ -39,7 +39,28 @@ def listar_personajes(nombre='' , categoria=''):
     cursor = conexion.cursor(dictionary=True)
 
     try:
-        
+        # %s marcado de posicion
+        sql = CONSULTA_PERSONAJES + ' WHERE p.nombre LIKE %s'
+        parametros = ['%' +  nombre + '%' ] 
+        if categoria != '':
+            sql += ' AND c.nombre = %s'
+            parametros.append(categoria)
+        sql += ' ORDER BY p.nombre'
+
+        cursor.execute(sql, parametros)
+        # convertir en array lo que viene de la base de datos y trae 
+        filas = cursor.fetchall()
+        personajes = []
+        for fila in filas:
+            personaje = Personaje(
+                fila['id'], fila['nombre'], fila['categoria'],
+                fila['especie'], fila['planeta'], fila['descripcion'], fila['imagen']
+            )
+            personajes.append(personaje)
+        return personajes
     finally:
         cursor.close()
         conexion.close()
+
+
+    

@@ -1,0 +1,19 @@
+<div class="grilla">
+    {%  for personaje in personajes  %}
+
+    <article class="tarjeta">
+        <img src="{{url_for('static' , filename='img/' + personaje.imagen)}}" alt="">
+
+        <div class="tarjeta-contenido">
+            <span class="etiqueta">{{personaje.categoria}}</span>
+            <h2>{{personaje.nombre}}</h2>
+
+            <p>{{personaje.resumen()}}</p>
+
+            <a class="boton" href="">Ver Personaje</a>
+        </div>
+    </article>
+
+
+    {% endfor   %}
+</div>

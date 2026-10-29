@@ -7,3 +7,10 @@ class Personaje:
         self.planeta = planeta
         self.descripcion= descripcion
         self.imagen = imagen
+
+
+    def resumen(self):
+        if len(self.descripcion) > 100:
+            return self.descripcion[:100] + '...'
+        return self.descripcion
+        
