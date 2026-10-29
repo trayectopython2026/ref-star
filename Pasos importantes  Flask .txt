@@ -1,0 +1,10 @@
+Algunos Pasos para  Construir una app con flask
+Documentación: https://flask.palletsprojects.com/en/stable/
+
+1 – Crear Entorno Virtual :   py -3 -m venv .venv
+2 – Activar Entorno Virtual: .venv\Scripts\activate
+3-  Instalar Flask :  pip install Flask
+4- Instalar Bootstrap: pip install bootstrap-flask
+5-  MYSQL : pip install mysql-connector-python
+6 – Ejecutar app con debug mode : flask --app app run --debug
+
